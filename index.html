@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>My Todo App</title>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css"/>
+    <link rel="stylesheet" href="node_modules/jquery-datetimepicker/build/jquery.datetimepicker.min.css"/>
+    <link rel="stylesheet" href="css/base.css" />
+    
+</head>
+<body>
+    <div class="msg">
+        <span class="msg-content"></span>
+        <span class="anchor confirmed">知道了</span>
+    </div>
+    <div class="container">   <!-- 总容器 -->
+        
+        <h1>我的ToDo应用</h1>
+        
+        <form class="add-task">
+            <input name="content"
+               type="text"
+               placeholder="e.g. 下午记得买菜"
+               autofocus
+               autocomplete="off" 
+            >
+            <button type="submit">submit</button>
+        </form>
+        
+        <div class="task-list">
+            <div class="task-item" data-index="">
+            <span><input type="checkbox"></span>
+                <span class="task-content">无内容</span>
+                <span class="fr">
+                    <span class="action delete"> 删除</span>
+                    <span class="action detail"> 详细</span> 
+                </span> 
+            </div>
+        </div>
+        
+        <div class="task-detail-mask"></div>
+        <div class="task-detail"> <!-- 任务详情 -->
+            <div>
+                <div class="content">下午学习php</div> <!-- 双击后变成input -->
+                <div>
+                    <div class="desc">
+                        <textarea id=""></textarea>
+                    </div>
+                </div>
+                <div class="remind"> <!-- 任务描述 -->
+                    <input type="date">
+                    <button type="submit">submit</button>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    <video class="alerter" src="alert.mp3"></video>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/store/store.js"></script>
+<script src="node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.js"></script>
+<script src="js/base.js"></script>
+</body>
+</html>
